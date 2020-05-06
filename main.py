@@ -36,7 +36,8 @@ def run(movie_pool):
         if user_input in ['h', 'l']:
             if user_input in answer:
                 score += 1
-                high_score = score
+                if score > high_score:
+                    high_score = score
                 print("\n**CORRECT**")
                 print(
                     "%s is rated %s and %s is rated %s\n" 
@@ -63,6 +64,8 @@ def run(movie_pool):
         else:
             print("\nINVALID INPUT")
             break
+
+# GET MOVIE POSTER FROM THE MOVIE DB API, PATH FOUND @ http://image.tmdb.org/t/p/w185/<URLPATH>
         
 if __name__ == "__main__":
     movie_pool = prepareData()
