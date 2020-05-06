@@ -1,3 +1,5 @@
 venv_mov
 *.gz
 *.tsv
+data
+.vscode
